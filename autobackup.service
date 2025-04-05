@@ -1,0 +1,15 @@
+[Unit]
+Description=Backup script before shutdown
+DefaultDependencies=no
+Before=shutdown.target reboot.target halt.target
+
+[Service]
+Type=oneshot
+ExecStart=/bin/true
+ExecStop=/home/ezri/autobackup.sh
+RemainAfterExit=yes
+TimeoutStopSec=600
+User=ezri
+
+[Install]
+WantedBy=multi-user.target
