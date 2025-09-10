@@ -1,6 +1,4 @@
-Jasne 👍 – poniżej masz gotowy, poprawnie sformatowany plik **README.md** w jednym kawałku, bez zbędnych wstawek typu „markdown”, „text”, „bash” poza blokami kodu.
 
-````markdown
 # SystemBackup 🗄️
 
 Zaawansowany system backupu dla środowisk WordPress z obsługą Docker i powiadomieniami email.
@@ -187,9 +185,5 @@ Jeśli napotkasz problemy:
 
 ## 📜 Licencja
 
-MIT License - szczegóły w pliku LICENSE.
+MIT License - możesz swobodnie używać i modyfikować skrypt.
 
-```
-
-Chcesz, żebym Ci od razu przygotował plik **README.md** i wysłał gotowy do pobrania, czy wystarczy Ci ta treść do samodzielnego zapisania?
-```
