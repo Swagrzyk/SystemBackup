@@ -2,13 +2,18 @@
 Description=Backup script before shutdown
 DefaultDependencies=no
 Before=shutdown.target reboot.target halt.target
+Conflicts=reboot.target
+After=network-online.target docker.service
+Requires=docker.service
 
 [Service]
 Type=oneshot
-ExecStart=/bin/true
-ExecStop=/home/ezri/autobackup.sh
+EnvironmentFile=/etc/backup.conf
+ExecStart=/bin/bash /home/ezri/autobackup.sh
+ExecStopPre=/usr/bin/sync
+ExecStop=/bin/bash -c "/home/ezri/autobackup.sh >> /home/ezri/Backups/backup_full.log 2>&1"
 RemainAfterExit=yes
-TimeoutStopSec=600
+TimeoutStopSec=300
 User=ezri
 
 [Install]
